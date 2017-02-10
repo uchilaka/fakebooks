@@ -1,0 +1,10 @@
+{
+  "name": "fakebooks",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "a0-angular-storage": "^0.0.15",
+    "jquery": "1.12.4",
+    "angular-sanitize": "^1.6.2"
+  }
+}

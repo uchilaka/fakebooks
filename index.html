@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="FakeBooks">
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>FakeBooks: Get a Recommendation today!</title>
+    <!--
+    <link rel="stylesheet" type="text/css" href="../dist/semantic.css">
+    -->
+
+    <!-- jQuery (the type, when not specified, defaults to JavaScript, as below) -->
+    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+    <!-- Angular JS -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="libs/a0-angular-storage/dist/angular-storage.min.js"></script>
+
+    <style type="text/css">
+        /** Everything here is considered style CSS. Use refs. like w3schools for syntax: http://www.w3schools.com/css **/
+        
+        body {
+            padding: 1em 1.25em;
+            font-size: 120%;
+            line-height: 120%;
+            /** this is a "safe" way to include fonts, so that if the left-most one is absent, it goes to the next one **/
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /** This is where the interpreter will stop "interpreting" CSS and switch back to HTML **/
+        
+        h1 {
+            color: #ff3300;
+            /** A more explicit use of red - using the `HEX` code for the color is more specific than `red`, and best-practice **/
+        }
+        
+        h3 {
+            color: #666666;
+        }
+        /** Comment this out to test how we're re-styling the nav bar **/
+        
+        ul#navbar {
+            list-style: none;
+            padding: 0;
+        }
+        
+        ul#navbar li {
+            display: inline-block;
+            padding: 0 1em;
+            /** Padding styling is done in the format (i.e. order of the numbers): top right bottom left; 
+            This can also work in short-hand as: top right, in which case it will then repeat the 
+            `top` setting for bottom, and the `right` setting for left, as we did above **/
+        }
+        
+        ul#navbar li a {
+            color: red;
+            /** An example of color styling in CSS **/
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="navbar">
+        <li><a href="#!/home">Home</a></li>
+        <li><a href="#!/login">Login</a></li>
+    </ul>
+
+    <h1>FakeBooks</h1>
+
+    <div ng-controller="AppController" ng-view></div>
+
+    <script type="text/javascript">
+        /* basic app code (we'll migrate this letter) */
+        angular.module('FakeBooks', [
+            'ngRoute',
+            'ngSanitize',
+            'angular-storage'
+        ])
+            .config(function ($routeProvider, $locationProvider) {
+                $locationProvider.hashPrefix('!');
+                $routeProvider
+                    .when('/home', {
+                        templateUrl: 'html/home.html',
+                        controller: 'HomeController'
+                    })
+                    .when('/login', {
+                        templateUrl: 'html/login.html',
+                        controller: 'LoginController'
+                    })
+                    .otherwise('/home');
+            })
+            .controller('AppController', function ($scope) {
+                console.log('[AppController]');
+                // This will teach you about the scopes and how they work
+            })
+            .controller('LoginController', function ($scope) {
+                console.log('[LoginController]');
+            })
+            .controller('HomeController', function ($scope) {
+                console.log('[HomeController]');
+            })
+            .controller('SearchController', function ($scope) {
+                console.log('[SearchController]');
+            })
+            ;
+    </script>
+
+</body>
+
+</html>
