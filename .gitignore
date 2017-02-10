@@ -1,2 +1,2 @@
-# directories to ignore when you commit to Git(hub)
-libs
+# directories to ignore when you commit to Git(hub) - the libs directory is included in the master branch for the demo
+#libs
