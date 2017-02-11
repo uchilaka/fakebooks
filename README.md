@@ -22,12 +22,16 @@ Our awesome (fake)books tool returns a book recommendation based on user selecti
 - gender 
 
 ## Attributes Dictionary
-exciting - 8
-drama - 7
-romantic - 6
-biography - 4
-adult fiction - 2
-religious - 1
+```
+{
+    exciting: 8,
+    drama: 7,
+    romantic: 6,
+    biography: 4,
+    'adult fiction': 2
+    religious: 1
+}
+```
 
 ## Books Data
 *Let's revisit this later, and take the opportunity to talk about data formats, and databases*
