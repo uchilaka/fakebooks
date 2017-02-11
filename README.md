@@ -22,7 +22,7 @@ Our awesome (fake)books tool returns a book recommendation based on user selecti
 - gender 
 
 ## Attributes Dictionary
-*For any particular attribute, a score of `10` is a high "happiness" score i.e. very exciting read, highly recommended for a feel good search. Conversely, a score of `1` represents a low "happiness" score.
+For any particular attribute, a score of `10` is a high "happiness" score i.e. very exciting read, highly recommended for a feel good search. Conversely, a score of `1` represents a low "happiness" score.
 ```
 {
     exciting: 8,
