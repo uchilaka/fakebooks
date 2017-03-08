@@ -1,0 +1,58 @@
+/** Everything here is considered style CSS. Use refs. like w3schools for syntax: http://www.w3schools.com/css **/
+
+body {
+    padding: 1em 1.25em;
+    font-size: 120%;
+    line-height: 120%;
+    /** this is a "safe" way to include fonts, so that if the left-most one is absent, it goes to the next one **/
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/** This is where the interpreter will stop "interpreting" CSS and switch back to HTML **/
+
+h1 {
+    color: #ff3300;
+    /** A more explicit use of red - using the `HEX` code for the color is more specific than `red`, and best-practice **/
+}
+
+h3 {
+    color: #666666;
+}
+
+
+/** Comment this out to test how we're re-styling the nav bar **/
+
+ul#navbar {
+    list-style: none;
+    padding: 0;
+}
+
+ul#navbar li {
+    display: inline-block;
+    padding: 0 1em;
+    /** Padding styling is done in the format (i.e. order of the numbers): top right bottom left; 
+            This can also work in short-hand as: top right, in which case it will then repeat the 
+            `top` setting for bottom, and the `right` setting for left, as we did above **/
+}
+
+ul#navbar li a {
+    color: red;
+    /** An example of color styling in CSS **/
+}
+
+#search_results .genre {
+    margin-right: 2px;
+    display: inline-block;
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 2.5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#search_results .genre:hover {
+    background-color: lightcoral;
+    color: #fff;
+    cursor: pointer;
+}

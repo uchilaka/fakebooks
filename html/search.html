@@ -1,0 +1,8 @@
+<!-- Show Search Results -->
+<div id="search_results">
+    <div ng-repeat="book in books">
+        <h3>{{ book.title }}</h3>
+        <blockquote>{{ book.description }}</blockquote>
+        <a ng-repeat="genre in book.genres" ng-href="#!/search/{{genre}}" class="genre">{{genre}}</a>
+    </div>
+</div>
